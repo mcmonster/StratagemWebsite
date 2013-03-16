@@ -1,0 +1,333 @@
+html {
+	 border:                  0px solid blue;
+	 height:                  100%;
+	 margin:                  0px 0px 0px 0px;
+	 padding:                 0px 0px 0px 0px;
+	 text-align:              center;
+	 width:                   100%;
+}
+
+body {
+	background-color:        #000000;
+    border:                  0px solid red;
+    color:                   #FFFFFF;
+    height:                  100%;
+    margin:                  0px 0px 0px 0px;
+    padding:                 0px 0px 0px 0px;
+    text-align:              center;
+    width:                   100%;
+}
+
+div#all {
+	min-width:               1290px;
+	text-align:              center;
+}
+
+div#banner {
+    border:                  0px solid white;
+    height:                  275px;
+    margin:                  0 0 0 0;
+    min-width:               1290px;
+    padding:                 0 0 0 0;
+    text-align:              center;
+    width:                   100%;
+}
+
+div#banner_left {
+	background-image:        url('../images/Banner_Left.png');
+	background-repeat:       repeat-x;
+	border:                  0px solid white;
+	float:                   left;
+    height:                  275px;
+    margin:                  0 0 0 0;
+    min-width:               645px;
+    padding:                 0 0 0 0;
+    position:                absolute;
+    width:                   50%;
+}
+
+div#banner_center {
+    border:                  0px solid white;
+    height:                  300px;
+    margin:                  0 0 0 -520px;
+    padding:                 0 0 0 50%;
+    position:                absolute;
+    width:                   660px;
+}
+
+div#banner_right {
+    background-image:        url('../images/Banner_Right.png');
+    border:                  0px solid white;
+    color:                   #FFFFFF;
+    float:                   left;
+    height:                  275px;
+    margin:                  0 0 0 50%;
+    padding:                 0 0 0 0;
+    position:                absolute;
+    width:                   50%;
+}
+
+div#content {
+	background-color:        #fcfcf0;
+	border:                  1px solid #85785b;
+	border-radius:           10px;
+	float:                   left;
+	font-family:             tahoma;
+	margin:                  0px 0px 0px 310px;
+	padding:                 0 0;
+	text-align:              justify;
+	width:                   690px;
+}
+
+div#donate {
+	background-image:        url('images/Donate.png');
+	background-repeat:       no-repeat;
+	background-size:         100% 100%;
+	border:                  0px solid white;
+	color:                   #000000;
+	float:                   right;
+    height:                  275px;
+    margin:                  -300px 0 0 0;
+    padding:                 0 0 0 0;
+    width:                   275px;
+}
+
+div#fb-like-box {
+	 float:                   left;
+	 margin:                  300px 0 0 0;
+	 position:                absolute;
+}
+
+div#left_decoration {
+	 border:                  0px;
+	 float:                   left;
+	 height:                  400px;
+	 margin:                  0 0 0 111px;
+	 padding:                 0 0 0 0;
+	 position:                absolute;
+	 width:                   200px;
+}
+
+div#links {
+	 margin:                  40px 0 0 240px;
+}
+
+div#keep_me_updated {
+	background-color:         #fcfcf0;
+    border:                   2px solid black;
+    border-radius:            5px;
+    color:                    black;
+    display:                  none;
+    font-family:              'Patrick Hand SC', cursive;
+    height:                   180px;
+    left:                     50%;
+    margin:                   25px 0 0 -175px;
+    padding:                  20px 20px 0px 20px;
+    position:                 fixed;
+    text-align:               center;
+    width:                    350px;
+    z-index:                  30;
+}
+
+div#kickstarter {
+    background-color:         #fcfcf0;
+    border:                   2px solid black;
+    border-radius:            5px;
+    color:                    black;
+    display:                  none;
+    font-family:              'Patrick Hand SC', cursive;
+    height:                   150px;
+    left:                     50%;
+    margin:                   25px 0 0 -100px;
+    padding:                  20px 20px 0px 20px;
+    position:                 fixed;
+    text-align:               center;
+    width:                    200px;
+    z-index:                  30;
+}
+
+div#want_to_help {
+    background-color:         #fcfcf0;
+    border:                   2px solid black;
+    border-radius:            5px;
+    color:                    black;
+    display:                  none;
+    font-family:              'Patrick Hand SC', cursive;
+    height:                   315px;
+    left:                     50%;
+    margin:                   25px 0 0 -260px;
+    padding:                  20px 20px 0px 20px;
+    position:                 fixed;
+    text-align:               left;
+    width:                    500px;
+    z-index:                  30; 
+}
+
+div#right_decoration {
+	border:                  0px;
+	float:                   left;
+	height:                  400px;
+	margin:                  0 0 0 1000px;
+	position:                absolute;
+	width:                   200px;
+}
+
+div#wrapper {
+	border:                  0px solid white;
+	margin:                  0px auto 0px auto;
+	padding:                 0px 0px 0px 0px;
+	text-align:              left;
+	width:                   1290px;
+}
+
+div#animatic {
+	background-color:        black;
+	border:                  1px solid black;
+	border-radius:           5px;
+	height:                  390px;
+	margin:                  20px 20px 20px 20px;
+	padding:                 0px 0px -3px 0px;
+	text-align:              center;
+	width:                   650px;
+	z-index:                 0;
+}
+
+iframe#facebook {
+	background-color:        #FFFFFF;
+	border:                  0px;
+	float:                   left;
+	height:                  275px;
+	margin:                  400px 0 0 1020px;
+	overflow:                hidden;
+	position:                absolute;
+	width:                   300px;
+}
+
+iframe#stratagem {
+	background-color:        #FFFFFF;
+    border:                  0px;
+	border-radius:           0px;
+	float:                   left;
+	height:                  380px;
+	margin:                  695px 0 0 1020px;
+	position:                absolute;
+	width:                   220px;
+}
+
+object#animatic {
+	margin:                  5px 0px 0px 5px;
+	padding:                 0 0;
+}
+
+p.description {
+	color:                   #000000;
+    font-family:             'Patrick Hand SC', cursive;
+    font-size:               18px;
+    font-style:              italic;
+    margin:                  0px 0px 20px 20px;
+    padding:                 0 0;
+    width:                   650px;
+}
+
+a {
+    color:                    #FFFFFF;
+    font-family:              'Patrick Hand SC', cursive;
+    text-decoration:          none;
+}
+
+a:hover, a:active {
+	color:                    #990000;
+}
+
+a.close_x {
+	color:                    #000000;
+	font-family:              'Patrick Hand SC', cursive;
+	font-size:                14px;
+	font-weight:              bold;
+	position:                 absolute;
+}
+
+a#keep_me_updated_close {
+	margin:                   -15px 0 0 355px;
+}
+
+a#want_to_help_close {
+	margin:                   -15px 0 0 505px;
+}
+
+h1.coming_soon {
+	color:                    #FFFFFF;
+	font-family:              'Patrick Hand SC', cursive;
+	font-size:                36px;
+	font-weight:              bold;
+	margin:                   162px 0 0 0;
+}
+
+h1.section {
+	color:                    #990000;
+	font-family:              'Patrick Hand SC', cursive;
+	font-size:                22px;
+	margin:                   0 0 0 0;
+	padding:                  10px 0 0 0;
+	text-align:               center;
+	width:                    100%;
+}
+
+.comic {
+	font-family:              'Patrick Hand SC', cursive;
+}
+
+.justified {
+    text-align:              justify;
+    width:                   100%;	
+}
+
+.full_width {
+	width:                   100%;
+}
+
+button#keep_me_updated_submit {
+	margin:                   0 0 0 10px;
+}
+
+div#want_to_help_name {
+	margin:                   0 0 0 0;
+	position:                 absolute;
+}
+
+div#want_to_help_email {
+	float:                    right;
+}
+
+div#want_to_help_how {
+	margin:                   40px 0 0 0;
+	position:                 absolute;
+}
+
+div#want_to_help_options {
+	margin:                    37px 0 0 125px;
+	position:                  absolute;
+	width:                     400px;
+}
+
+div#want_to_help_leave_us_a_note {
+	margin:                    95px 0 0 0;
+	position:                  absolute;
+}
+
+div#want_to_help_note {
+	margin:                    95px 0 0 110px;
+	position:                  absolute;
+	width:                     200px;
+}
+
+div#want_to_help_submit {
+	margin:                    185px 0 0 445px;
+	position:                  absolute;
+}
+
+textarea#note_text {
+	font-size:                 16px;
+	height:                    75px;
+	width:                     385px;
+}

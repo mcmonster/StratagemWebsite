@@ -1,0 +1,251 @@
+<!doctype html>
+<!-- ^^^ Use "Standards Mode" Browser Rendering -->
+
+<html>
+	<head>
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	
+		<!-- ------------------------------------------------------------------------------------- -->
+		<!-- Style Settings -->
+		<!-- ------------------------------------------------------------------------------------- -->
+		<link type="text/css" rel="stylesheet" href="styles/StratagemWebsite.css" />
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Patrick+Hand+SC" />
+		
+		<!-- JQuery Styles -->
+		<!-- <link type="text/css" rel="stylesheet" href="styles/smoothness/jquery-ui-1.10.2.custom.css" /> -->
+		
+		<!-- Popup Styles -->
+		<link type="text/css" rel="stylesheet" href="styles/Popups.css" />
+		
+		<!-- ------------------------------------------------------------------------------------- -->
+		<!-- Script Settings -->
+		<!-- ------------------------------------------------------------------------------------- -->
+		<!-- <script type="text/javascript" src="stratagemwebsite/stratagemwebsite.nocache.js"></script> -->
+		
+		<!-- JQuery Library -->
+	    <!-- <script type="text/javascript" src="scripts/jquery-1.9.1.js"></script> -->
+	    <!-- <script type="text/javascript" src="scripts/jquery-ui-1.10.2.custom.js"></script> -->
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	    
+	    <!-- Pop-up Functionality -->
+	    <script>
+	    $(document).ready(function(){
+	    	var $isPopupOpen = false
+	    	
+	    	$("a#kickstarter").click(function() {
+	    		if (!$isPopupOpen) {
+	    			$isPopupOpen = true;
+	    	        $("div#kickstarter").show();
+	    	    }
+	        });
+	    	
+	    	$("button#kickstarter_close").click(function() {
+	    		$isPopupOpen = false;
+	    		$("div#kickstarter").hide();
+	    	});
+	    	
+	    	$("a#keep_me_updated").click(function() {
+	    		if (!$isPopupOpen) {
+	    		    $isPopupOpen = true;
+	    			$("div#keep_me_updated").show();
+	    		}
+	    	});
+	    	
+	    	$("a#keep_me_updated_close").click(function() {
+	    		$isPopupOpen = false;
+	    		$("div#keep_me_updated").hide();
+	    	});
+	    	
+	    	$("a#want_to_help").click(function() {
+	    		if (!$isPopupOpen) {
+	    			$isPopupOpen = true;
+	    			$("div#want_to_help").show();
+	    		}
+	    	});
+	    	
+	    	$("a#want_to_help_close").click(function() {
+	    		$isPopupOpen = false;
+	    		$("div#want_to_help").hide();
+	    	});
+	    });
+	    </script>
+	    <!-- <script src="scripts/popups.js"></script> -->
+		
+		<!-- ------------------------------------------------------------------------------------- -->
+		<!-- Miscellaneous Settings -->
+		<!-- ------------------------------------------------------------------------------------- -->
+		<title>Stratagem: Chroma Commander</title>
+	</head>
+
+    <body>
+        <!-- Facebook Preview Code -->
+        <div id="fb-root"></div>
+        <script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+   
+        <!-- Main Page Code -->
+        <div id="all">
+            <div id="banner">
+                <div id="banner_left">&nbsp;</div>
+                <div id="banner_right">
+                    <div id="links">
+                        <a id="kickstarter">The Kickstarter</a> | 
+                        <a id="keep_me_updated">Keep Me Updated</a> | 
+                        <a id="want_to_help">Want To Help?</a>
+                    </div>
+                </div>
+                <div id="banner_center">
+                    <img src="images/Banner_Center.png" />
+                </div>
+            </div>
+
+            <!-- <div id="donate">&nbsp;</div> -->
+            <div id="wrapper">
+                <div id="left_decoration">
+                    <img src="images/Left_Decoration.png" />
+                </div>
+                <iframe src="http://www.kickstarter.com/projects/236880877/731131045/widget/card.html"
+                        id="stratagem"></iframe>
+                <iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FStratagem%2F479644112083362&amp;width=300&amp;height=290&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color&amp;header=true" 
+                        id="facebook"></iframe>
+                <div id="content">
+                    <div id="animatic">
+                        <!-- <h1 class="coming_soon">Preview Video Coming Soon!</h1> -->
+                        <object width="640" height="390" id="animatic">
+                            <param name="movie"
+                                   value="https://www.youtube.com/v/u1zgFlCw8Aw?version=3&autoplay=0&controls=0"></param>
+                            <param name="allowScriptAccess" value="always"></param>
+                            <param name="wmode" value="transparent" />
+                            <embed src="https://www.youtube.com/v/u1zgFlCw8Aw?version=3&autoplay=0&controls=0"
+                                   type="application/x-shockwave-flash"
+                                   allowscriptaccess="always"
+                                   width="640" height="390"
+                                   wmode="transparent"></embed>
+                        </object>
+                    </div>
+                    <p class="description">
+	                    In ancient times, when darkness threatened to consume the world, a radiant hero 
+	                    appeared and valiantly drove back the shadows, heralding an era of peace to the 
+	                    land of Chromatia. As centuries passed, the memories of the terrible darkness 
+	                    faded into legend, and the people of Chromatia became bitterly divided in their 
+	                    struggles to rule the kingdom. The Ivory King has fallen ill, weak from old age, 
+	                    and a new ruler must be chosen to take his place before the ever-encroaching 
+	                    Blacklands engulf the kingdom. Each of the mighty generals from the six realms 
+	                    desires the throne for themselves, thus the drums of war begin to sound. Only you 
+	                    can lead your people to victory and claim the throne for yourself in the chaos to 
+	                    come!
+                    </p>
+                    <h1 class="section">So What Is Stratagem: Chroma Commander?</h1>
+                    <p class="description">
+                        Stratagem is a vibrant homage to the strategy RPG games of old. We at Sneaky Little 
+                        Studios wanted to honor the classics, while revitalizing the gameplay with intense 
+                        multiplayer options that allow you to battle your friends from your smartphone or 
+                        tablet computer. It is in that spirit that we welcome you to the land of Chromatia
+                        where a fierce fight for the throne has begun. You choose one of six commanders as 
+                        your in-game avatar, ranging from the dull-witted but noble Red Knight to the dark 
+                        and sultry Purple Witch. To protect your commander, you will form an army from a 
+                        roster of minions that continually grows as your reputation increases. Battles are 
+                        fought on a grid map, and you claim victory by defeating your opponent’s commander. 
+                        But you must choose your actions wisely, as each turn you are granted a limited number 
+                        of “Action Points” that are used to move and attack with your units. Winning battles 
+                        grants you wealth and power while strengthening your units for future confrontations.
+                    </p>
+                    <h1 class="section">How Much Will It Cost?</h1>
+                    <center>
+                        <p class="description">
+                            Nothing! Stratagem: Chroma Commander will be free to download and free to play.
+                        </p>
+                    </center>
+                    <h1 class="section">How Can I Help?</h1>
+                    <p class="description">
+                        The best way to help us make Stratagem: Chroma Commander a success is to spread
+                        the word! We have a KickStarter fund-raising effort scheduled to begin in April.
+                        Any donations would be greatly appreciated and will be used to fund the development
+                        of the game.
+                    </p>
+                </div>
+                <div id="right_decoration">
+                    <img src="images/Right_Decoration.png" />
+                </div>
+            </div>
+        </div>
+        
+        <!-- Popup Code -->
+        <div id="kickstarter">
+            <div class="justified">
+                The KickStarter fund-raising hasn't started yet. As soon as the fund-raising begins,
+                this link will take you to the KickStarter project!
+            </div>
+            <button id="kickstarter_close" class="comic">Okay</button>
+        </div>
+        <div id="keep_me_updated">
+            <a id="keep_me_updated_close" class="close_x">X</a>
+            <div class="justified">
+                Leave us your email address so we can periodically send you updates about the game.
+                We here at Sneaky Little Studios hate getting flooded with emails by the projects 
+                we follow so rest assured our email updates will only be sent when there's something 
+                big to announce.
+            </div>
+            <br />
+            <form>
+                My Email: <input type="text" id="keep_me_updated_email" />
+                <button id="keep_me_updated_submit" class="comic">Keep Me Updated!</button>
+            </form>
+        </div>
+        <div id="want_to_help">
+            <a id="want_to_help_close" class="close_x">X</a>
+            <div class="justified">
+                If you want to help make Stratagem: Chroma Commander a success, leave us your
+                contact information and how you would like to help below. Someone here at Sneaky
+                Little Studios will get in contact with you as soon as possible.
+            </div>
+            <br />
+            <form id="want_to_help_details">
+                <div id="want_to_help_name">
+			        My Name: <input type="text" name="name" />
+			    </div>
+			    <div id="want_to_help_email">
+			        My Email: <input type="text" name="email" />
+			    </div>
+			    <div id="want_to_help_how">
+			        How I Want To Help:
+			    </div>
+			    <div id="want_to_help_options">
+	                <table>
+	                    <tr>
+	                        <td>
+				                <input type="checkbox" name="development">Writing Code
+				                <input type="checkbox" name="marketing">Spreading The Word
+				                <input type="checkbox" name="website">Website Development
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <input type="checkbox" name="art">The Art&nbsp;
+				                <input type="checkbox" name="donating">Donating&nbsp;
+				                <input type="checkbox" name="investing">Investing&nbsp;
+				                <input type="checkbox" name="other">Other
+				            </td>
+				        </tr>
+				    </table>
+				</div>
+				<div id="want_to_help_leave_us_a_note">
+				    Leave Us A Note:
+				</div>
+				<div id="want_to_help_note">
+				    <textarea id="note_text" maxlength="2000" name="note" class="comic">Dear Sneaky Little Studios...</textarea>
+				</div>
+				<div id="want_to_help_submit">
+				    <button id="want_help_submit" class="comic">SUBMIT!</button>
+				</div>
+            </form>
+        </div>
+    </body>
+</html>
