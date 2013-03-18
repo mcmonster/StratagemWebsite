@@ -6,3 +6,4 @@ gaeHrdEnabled=true
 gaeIsEclipseDefaultInstPath=true
 googleCloudSqlEnabled=false
 localDevMySqlEnabled=true
+ormEnhancementInclusions=src/|test/|src/com/sneaky/stratagem/models/*.java

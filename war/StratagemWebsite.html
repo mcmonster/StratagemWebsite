@@ -29,6 +29,18 @@
 	    
 	    <!-- Pop-up Functionality -->
 	    <script>
+	    function escape (str) {
+	    	return str
+			        .replace(/[\\]/g, '\\\\')
+			        .replace(/[\"]/g, '\\\"')
+			        .replace(/[\/]/g, '\\/')
+			        .replace(/[\b]/g, '\\b')
+			        .replace(/[\f]/g, '\\f')
+			        .replace(/[\n]/g, '\\n')
+			        .replace(/[\r]/g, '\\r')
+			        .replace(/[\t]/g, '\\t');
+	    };
+	    
 	    $(document).ready(function(){
 	    	var $isPopupOpen = false
 	    	
@@ -56,6 +68,22 @@
 	    		$("div#keep_me_updated").hide();
 	    	});
 	    	
+	    	$("#keep_me_updated_submit").click(function() {
+	    		var $form = document.getElementById('keep_me_updated_form');
+	    		var $data = '{"email": "' + $form.elements['email'].value + '"}';
+                $.post(
+                    "RegisterServlet",
+                    {
+                    	type:"KeepMeUpdated",
+                    	data:$data
+                    },
+                    function(responseText) {
+                        alert(responseText);
+                    });
+                $isPopupOpen = false;
+                $("div#keep_me_updated").hide();
+	    	});
+	    	
 	    	$("a#want_to_help").click(function() {
 	    		if (!$isPopupOpen) {
 	    			$isPopupOpen = true;
@@ -66,6 +94,34 @@
 	    	$("a#want_to_help_close").click(function() {
 	    		$isPopupOpen = false;
 	    		$("div#want_to_help").hide();
+	    	});
+	    	
+	    	$("#want_to_help_submit").click(function() {
+	    	    var $form = document.getElementById('want_to_help_details');
+                var $data = '{'
+                          + '"name": "' + escape($form.elements['name'].value) + '", '
+                          + '"email": "' + escape($form.elements['email'].value) + '", '
+                          + '"note": "' + escape($form.elements['note'].value) + '", '
+                          + '"development": "' + $form.elements['development'].checked + '", '
+                          + '"marketing": "' + $form.elements['marketing'].checked + '", '
+                          + '"website": "' + $form.elements['website'].checked + '", '
+                          + '"art": "' + $form.elements['art'].checked + '", '
+                          + '"donating": "' + $form.elements['donating'].checked + '", '
+                          + '"investing": "' + $form.elements['investing'].checked + '", '
+                          + '"testing": "' + $form.elements['testing'].checked + '", '
+                          + '"other": "' + $form.elements['other'].checked + '"'
+                          + '}';
+                $.post(
+                        "RegisterServlet",
+                        {
+                            type:"WantToHelp",
+                            data:$data
+                        },
+                        function(responseText) {
+                            alert(responseText);
+                        });
+                $isPopupOpen = false;
+                $("div#want_to_help").hide();
 	    	});
 	    });
 	    </script>
@@ -109,16 +165,16 @@
             <!-- <div id="donate">&nbsp;</div> -->
             <div id="wrapper">
                 <div id="left_decoration">
-                    <img src="images/Left_Decoration.png" />
+                    <!-- <img src="images/Left_Decoration.png" /> -->
                 </div>
-                <iframe src="http://www.kickstarter.com/projects/236880877/731131045/widget/card.html"
-                        id="stratagem"></iframe>
+                <!-- <iframe src="http://www.kickstarter.com/projects/236880877/731131045/widget/card.html"
+                        id="stratagem"></iframe>-->
                 <iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FStratagem%2F479644112083362&amp;width=300&amp;height=290&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color&amp;header=true" 
                         id="facebook"></iframe>
                 <div id="content">
                     <div id="animatic">
-                        <!-- <h1 class="coming_soon">Preview Video Coming Soon!</h1> -->
-                        <object width="640" height="390" id="animatic">
+                        <h1 class="coming_soon">Preview Video Coming Soon!</h1>
+                        <!-- <object width="640" height="390" id="animatic">
                             <param name="movie"
                                    value="https://www.youtube.com/v/u1zgFlCw8Aw?version=3&autoplay=0&controls=0"></param>
                             <param name="allowScriptAccess" value="always"></param>
@@ -128,7 +184,7 @@
                                    allowscriptaccess="always"
                                    width="640" height="390"
                                    wmode="transparent"></embed>
-                        </object>
+                        </object>-->
                     </div>
                     <p class="description">
 	                    In ancient times, when darkness threatened to consume the world, a radiant hero 
@@ -172,7 +228,7 @@
                     </p>
                 </div>
                 <div id="right_decoration">
-                    <img src="images/Right_Decoration.png" />
+                    <!-- <img src="images/Right_Decoration.png" /> -->
                 </div>
             </div>
         </div>
@@ -194,9 +250,9 @@
                 big to announce.
             </div>
             <br />
-            <form>
-                My Email: <input type="text" id="keep_me_updated_email" />
-                <button id="keep_me_updated_submit" class="comic">Keep Me Updated!</button>
+            <form id="keep_me_updated_form">
+                My Email: <input type="text" id="keep_me_updated_email" name="email" />
+                <input type="button" id="keep_me_updated_submit" class="comic" value="Keep Me Updated!" />
             </form>
         </div>
         <div id="want_to_help">
@@ -228,9 +284,10 @@
 				        </tr>
 				        <tr>
 				            <td>
-				                <input type="checkbox" name="art">The Art&nbsp;
-				                <input type="checkbox" name="donating">Donating&nbsp;
-				                <input type="checkbox" name="investing">Investing&nbsp;
+				                <input type="checkbox" name="art">The Art
+				                <input type="checkbox" name="donating">Donating
+				                <input type="checkbox" name="investing">Investing
+				                <input type="checkbox" name="testing">Beta Testing
 				                <input type="checkbox" name="other">Other
 				            </td>
 				        </tr>
@@ -243,7 +300,7 @@
 				    <textarea id="note_text" maxlength="2000" name="note" class="comic">Dear Sneaky Little Studios...</textarea>
 				</div>
 				<div id="want_to_help_submit">
-				    <button id="want_help_submit" class="comic">SUBMIT!</button>
+				    <input type="button" id="want_to_help_submit" class="comic" value="SUBMIT!" />
 				</div>
             </form>
         </div>
